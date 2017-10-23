@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Crypto Info</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<style type="text/css">
+	body{
+		height: 500px;
+		margin: 5px;
+		width: 400px;
+	}
+	.tab_content{
+		min-height: 100vw;
+		padding: 4px;
+	}
+	.scrollit{
+		overflow-y: scroll;
+	}
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	thead {
+		border-bottom: 1px solid #5d5d5d;
+		background: darkgray;
+	}
+	table{
+		background: gainsboro;
+	}
+	table.highlight>tbody>tr:hover {
+		background-color: #c1c1c1;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col s12">
+				<ul id="tabs" class="tabs">
+					<li class="tab col s3"><a class="active" href="#home_tab_content">Home</a></li>
+					<li class="tab col s3"><a href="#watchlist_tab_content">Watchlist</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="row">
+			<div id="home_tab_content" class="col s12 tab_content">
+
+				<div class="row">
+					<div class="input-field col s12">
+
+						<input type="text" id="autocomplete-input" class="autocomplete">
+						<label for="autocomplete-input">Search</label>
+					</div>
+				</div>
+				<div class="row">
+					<table>
+						<thead>
+							<tr>
+								<th>Symbol</th>
+								<th>Name</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td colspan="3" style="padding: 0px;">
+
+
+									<div class="scrollit" style="height: 320px;">
+										<table class="striped highlight">
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+			<div id="watchlist_tab_content" class="col s12 tab_content">
+				<div class="row">
+					<table>
+						<thead>
+							<tr>
+								<th>Symbol</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td colspan="3" style="padding: 0px;">
+
+
+									<div class="scrollit" style="height: 420px;">
+										<table class="striped highlight">
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+												<td><a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">close</i></a></td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+											<tr>
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td>Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+											<tr>
+												<td>Jonathan</td>
+												<td>Lollipop</td>
+												<td>$7.00</td>
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/popup.js"></script>
+
+
+</html>

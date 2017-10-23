@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "CryptoInfo",
+  "version": "0.1",
+  "author": "PrabhuVinod",
+  "description": "Chrome extension that provides information about all types of cryptocurrencies.",
+  //"icons": { "128": "monero.png" },
+  "content_security_policy": "script-src 'self' https://coinbin.org/xmr; object-src 'self'",
+  "permissions": [
+          "storage",
+          "https://*/"
+        ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Crypto Info"
+    //"default_icon": "monero.png"
+  }
+}
