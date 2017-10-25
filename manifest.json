@@ -7,7 +7,6 @@
   //"icons": { "128": "monero.png" },
   "content_security_policy": "script-src 'self' https://coinbin.org/xmr; object-src 'self'",
   "permissions": [
-          "storage",
           "https://*/"
         ],
   "browser_action": {

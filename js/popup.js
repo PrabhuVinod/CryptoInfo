@@ -1,19 +1,60 @@
-    $(document).ready(function(){
-    $('#tabs').tabs();
+//document.addEventListener('DOMContentLoaded', documentEvents  , false);
+
+$(document).ready( function () {
 
 
-     $('input.autocomplete').autocomplete({
-    data: {
-      "Apple": null,
-      "Microsoft": null,
-      "Google": 'sa'
-    },
-    limit: 10, // The max amount of results that can be shown at once. Default: Infinity.
-    onAutocomplete: function(val) {
-      // Callback function when value is autcompleted.
-    },
-    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-  });
 
 
-  });
+ $.ajax({
+  url: "https://coinbin.org/coins",
+  type: "GET",
+      dataType: "json", 
+      crossDomain: true,  
+  success: function(result){
+        
+        $('.loader').remove();
+
+
+        var all_coins = [];
+        var all_obj = result.coins;
+
+for(var coin in all_obj) {
+
+   //console.log(JSON.stringify(all_obj[coin]));
+   var coin_obj = all_obj[coin];
+   var coin_arr = [];
+   coin_arr.push(coin_obj.rank);
+   var sym_name = coin_obj.name.split('  ');
+   coin_arr.push(sym_name[0]);
+   coin_arr.push(sym_name[1]);
+   coin_arr.push('$ '+coin_obj.usd);
+
+   all_coins.push(coin_arr);
+
+console.log("IN"+all_coins);
+
+}
+
+console.log("OUT"+all_coins);
+
+$('#table_id').DataTable({
+  "info": false,
+  data: all_coins,
+  "pagingType": "simple",
+  columns: [
+            { title: "Rank" },
+            { title: "Symbol" },
+            { title: "Name" },
+            { title: "Price" }
+        ]
+});
+  $('.dataTables_length').remove();
+
+
+
+    }});
+
+
+    
+  
+} );
